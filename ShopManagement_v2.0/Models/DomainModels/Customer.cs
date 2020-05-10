@@ -24,7 +24,7 @@ namespace ShopManagement_v2.Models
         [Required(ErrorMessage = "Please enter an email address.")]
         public string Email { get; set; }
 
-        // public Boolean isActive { get; set; }
+        public string FullName => $"{FirstName} {LastName}";
 
         //vehicle foreign key
         public string VehicleID { get; set; }

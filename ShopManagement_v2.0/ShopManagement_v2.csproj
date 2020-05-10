@@ -15,7 +15,6 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Views\Customer\" />
     <Folder Include="Areas\Admin\Views\Appointment\" />
-    <Folder Include="Views\Appointment\" />
     <Folder Include="wwwroot\lib\" />
   </ItemGroup>
 

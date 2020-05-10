@@ -1,0 +1,37 @@
+﻿@model AppointmentListViewModel
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>Appointment's List</h1>
+
+<form asp-action="Add" asp-controller="WorkOrder" method="post">
+    <table class="table table-bordered table-striped">
+        <thead class=" thead-dark">
+            <tr>
+                <th>Customer Name</th>
+                <th>Vehicle Make</th>
+                <th>Vehicle Model</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(Customer customer in Model.Customers)
+            {
+                <tr>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@customer.CustomerID">
+                            @customer.FullName
+                        </a>
+                    </td>
+                    <td>@customer.Vehicle.Make</td>
+                    <td>@customer.Vehicle.Model</td>
+                    <td>
+                        <button type="submit" name="id" value="@customer.CustomerID"
+                                class="btn btn-primary">Add to work</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</form>

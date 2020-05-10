@@ -2,7 +2,7 @@
 
 namespace ShopManagement_v2.Models
 {
-    public class AppointmentListView
+    public class AppointmentListViewModel
     {
         public IEnumerable<Appointment> Appointments { get; set; }
         public IEnumerable<Customer> Customers { get; set; }
