@@ -48,7 +48,7 @@
                                 </form>
                             </li>
                         }
-                        else
+                        @*else
                         {
                             var action = ViewContext.RouteData.Values["action"]?.ToString();
 
@@ -58,7 +58,7 @@
                                 <a asp-action="Login" asp-controller="Account"
                                    asp-area="" class="btn btn-primary">Log In</a>
                             </li>
-                        }
+                        }*@
 
                         <li class="nav-item @Nav.Active("Admin", current)">
                             <a class="nav-link" asp-action="Index" asp-controller="User" asp-area="Admin">

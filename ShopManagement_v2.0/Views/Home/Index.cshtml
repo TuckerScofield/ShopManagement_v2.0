@@ -8,4 +8,31 @@
     <p>This system is designed to make it easier for you to manage your technicians, appointments and most importantly, your customers.</p>
 </div>
 
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<User> signInManager
+
+@if (signInManager.IsSignedIn(User))
+{
+    // went alternate route with this, however it kep breaking when i tried to write it another way
+    @*<li class="nav-item">
+        <form method="post" asp-action="LogOut" asp-controller="Account"
+              asp-area="">
+            <input type="submit" value="Log Out"
+                   class="btn btn-outline" />
+            <span class="text-black-50">@User.Identity.Name</span>
+        </form>
+    </li>*@
+}
+else
+{
+    var action = ViewContext.RouteData.Values["action"]?.ToString();
+
+    // anonymous user - Log In button
+
+    <li class="text-center">
+        <a asp-action="Login" asp-controller="Account"
+           asp-area="" class="btn btn-primary">Log In</a>
+    </li>
+}
+
 
