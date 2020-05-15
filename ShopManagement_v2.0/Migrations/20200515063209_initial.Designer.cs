@@ -10,7 +10,7 @@ using ShopManagement_v2.Models;
 namespace ShopManagement_v2.Migrations
 {
     [DbContext(typeof(ShopContext))]
-    [Migration("20200505160121_initial")]
+    [Migration("20200515063209_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -160,6 +160,9 @@ namespace ShopManagement_v2.Migrations
                     b.Property<int>("CustomerID")
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("DateAdded")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("TechnicianID")
                         .HasColumnType("int");
 
@@ -176,18 +179,21 @@ namespace ShopManagement_v2.Migrations
                         {
                             VehicleID = 1,
                             CustomerID = 1,
+                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TechnicianID = 1
                         },
                         new
                         {
                             VehicleID = 1,
                             CustomerID = 2,
+                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TechnicianID = 2
                         },
                         new
                         {
                             VehicleID = 1,
                             CustomerID = 3,
+                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TechnicianID = 3
                         });
                 });

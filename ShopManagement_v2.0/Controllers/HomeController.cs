@@ -11,5 +11,10 @@ namespace ShopManagement_v2.Controllers
             return View();
         }
 
+        public IActionResult About()
+        {
+            return View();
+        }
+
     }
 }

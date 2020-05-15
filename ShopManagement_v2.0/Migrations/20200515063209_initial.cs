@@ -215,7 +215,8 @@ namespace ShopManagement_v2.Migrations
                 {
                     CustomerID = table.Column<int>(nullable: false),
                     VehicleID = table.Column<int>(nullable: false),
-                    TechnicianID = table.Column<int>(nullable: false)
+                    TechnicianID = table.Column<int>(nullable: false),
+                    DateAdded = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -274,18 +275,18 @@ namespace ShopManagement_v2.Migrations
 
             migrationBuilder.InsertData(
                 table: "Appointments",
-                columns: new[] { "VehicleID", "CustomerID", "TechnicianID" },
-                values: new object[] { 1, 1, 1 });
+                columns: new[] { "VehicleID", "CustomerID", "DateAdded", "TechnicianID" },
+                values: new object[] { 1, 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1 });
 
             migrationBuilder.InsertData(
                 table: "Appointments",
-                columns: new[] { "VehicleID", "CustomerID", "TechnicianID" },
-                values: new object[] { 1, 2, 2 });
+                columns: new[] { "VehicleID", "CustomerID", "DateAdded", "TechnicianID" },
+                values: new object[] { 1, 2, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 2 });
 
             migrationBuilder.InsertData(
                 table: "Appointments",
-                columns: new[] { "VehicleID", "CustomerID", "TechnicianID" },
-                values: new object[] { 1, 3, 3 });
+                columns: new[] { "VehicleID", "CustomerID", "DateAdded", "TechnicianID" },
+                values: new object[] { 1, 3, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 3 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Appointments_CustomerID",

@@ -14,7 +14,7 @@ namespace ShopManagement_v2.Models
                     FirstName = "Han",
                     LastName = "Solo",
                     Address = "2nd Dune on the left, Tatooine",
-                    Phone = 742 - 684 - 3541,
+                    Phone = 742-684-3541,
                     Email = "millenialfalcon@starwars.com"
                 },
                 new Customer
@@ -23,7 +23,7 @@ namespace ShopManagement_v2.Models
                     FirstName = "Hal",
                     LastName = "Jordan",
                     Address = "Sector 2814 Earth Sector",
-                    Phone = 852 - 456 - 2814,
+                    Phone = 852-456-2814,
                     Email = "inbrightestday@GLcorps.com"
                 },
                 new Customer
@@ -32,7 +32,7 @@ namespace ShopManagement_v2.Models
                     FirstName = "John",
                     LastName = "Smith",
                     Address = "That place, over there",
-                    Phone = 111 - 222 - 1234,
+                    Phone = 111-222-1234,
                     Email = "nobody@nowhere.com"
                 }
             );
